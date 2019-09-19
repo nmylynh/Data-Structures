@@ -33,7 +33,7 @@
 ### :three: Queues & Stacks
  [<img src="https://res.cloudinary.com/practicaldev/image/fetch/s--40bG1tSg--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://thepracticaldev.s3.amazonaws.com/i/fcxri84smzo9m1pxbxj9.png"/>](https://dev.to/rinsama77/data-structure-stack-and-queue-4ecd)
 
-#### :restroom: **Queues:** First in, First Out - Horizontal
+### :restroom: **Queues:** First in, First Out - Horizontal
 **A queue is a container of objects (a linear collection) that are inserted and removed according to the FIFO principle**
 - For example, line at groceries, food courts, or retail stores
 - Only two operations are allowed:
@@ -49,7 +49,7 @@
 
  [<img src="https://res.cloudinary.com/practicaldev/image/fetch/s--GS1k4iwx--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://thepracticaldev.s3.amazonaws.com/i/l8r4ic2gedi0j9obd7ix.jpg"/>](https://dev.to/rinsama77/data-structure-stack-and-queue-4ecd)
 
-#### :books: **Stacks:** Last In, First Out - Vertical 
+### :books: **Stacks:** Last In, First Out - Vertical 
 **A stack is a limited access data structure  where elements can only be added and removed at the top, LIFO principle**
 - Like a stack of books, you remove the top stack, and when you add, you add to the top stack
 - There are 3 basic operations on a stack:
@@ -70,12 +70,12 @@
 
 #### A linked list is a list of nodes and they're conceptually stored linearly in memory
 #### In it's most basic form, a linked list is a string of nodes, sort of like a string of pearls, with each node containing both data and a reference to the next node in the list     
-1. Note: This is a **singly linked list. **
-    - The nodes in a doubly linked list will contain references to both the next node and the previous node. 
-2. The main advantage of using a linked list over a similar data structure, like the static array, is the linked list’s dynamic memory allocation: 
+**Singly linked lists** have one head, one tail, with each node having a one directional pointer to the _next node_.
+**Doubly linked lists** will contain references to both the _next node_ and the _previous node._
+- The main advantage of using a linked list over a similar data structure, like the static array, is the linked list’s dynamic memory allocation: 
     - if you don’t know the amount of data you want to store before hand, the linked list can adjust on the fly.* 
     - Of course this advantage comes at a price: dynamic memory allocation requires more space and commands slower look up times.
-3. For storage, an array isnt a good choice (cuz it's static) because you're reguarly adding and removing things, but linked list allows for effcient operations due to it's structure
+- For storage, an array isnt a good choice (cuz it's static) because you're reguarly adding and removing things, but linked list allows for effcient operations due to it's structure
 
 
 *In practice this means certain insertions are more expensive. For example, if the list initially allocates enough space for eight nodes, on the ninth insertion the list will have to double its allocated space to 16 and copy over the original 8 nodes, a more expensive operation than a normal insertion.
