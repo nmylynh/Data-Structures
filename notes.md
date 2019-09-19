@@ -70,8 +70,8 @@
 
 #### A linked list is a list of nodes and they're conceptually stored linearly in memory
 #### In it's most basic form, a linked list is a string of nodes, sort of like a string of pearls, with each node containing both data and a reference to the next node in the list     
-**Singly linked lists** have one head, one tail, with each node having a one directional pointer to the _next node_.
-**Doubly linked lists** will contain references to both the _next node_ and the _previous node._
+1. **Singly linked lists** have one head, one tail, with each node having a one directional pointer to the _next node_.
+2. **Doubly linked lists** will contain references to both the _next node_ and the _previous node._
 - The main advantage of using a linked list over a similar data structure, like the static array, is the linked list’s dynamic memory allocation: 
     - if you don’t know the amount of data you want to store before hand, the linked list can adjust on the fly.* 
     - Of course this advantage comes at a price: dynamic memory allocation requires more space and commands slower look up times.
