@@ -1,5 +1,6 @@
 # CS21 Data Structures: Linked Lists w/ Brian Doyle
 
+ [<img src="https://3.bp.blogspot.com/-sXOQBd_OCR8/WBBn3QNhOiI/AAAAAAAAALQ/ysaUNOhKMoY59zw2cRxcHioHzdvn8HdNgCLcB/s1600/simpleLinkedList.png"/>](https://www.codefellows.org/blog/implementing-a-singly-linked-list-in-python/)
 ### Terms:
 
 #### Array:
@@ -63,7 +64,7 @@ class Node(object):
 ```
 
 - The node initializes with a single datum
-- its pointer is set to None by default 
+- its pointer is set to `None` by default 
     - (this is because the first node inserted into the list will have nothing to point at!). 
 - We also add a few convenience methods: 
     - `get_data`: returns the stored data
@@ -71,6 +72,17 @@ class Node(object):
     - `set_next`: a method to reset the pointer to a new node. 
 
 These will come in handy when we implement the Linked List.
+
+The Linked List
+My simple implementation of a linked list includes the following methods:
+
+Insert: inserts a new node into the list
+
+Size: returns size of list
+
+Search: searches list for a node containing the requested data and returns that node if found, otherwise raises an error
+
+Delete: searches list for a node containing the requested data and removes it from list if found, otherwise raises an error
 
 
 
