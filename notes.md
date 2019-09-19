@@ -53,9 +53,9 @@
     - Elements can only be added and removed at the top
 - Like a stack of books, you remove the top stack, and when you add, you add to the top stack
 - There are 3 basic operations on a stack:
-1. Push: Insert a data item on the stack.
-2. Pop: Remove an item from the top of the stack.
-3. Peek: Read the value of an item from the top of the stack WITHOUT removing it
+    1. **Push:** Insert a data item on the stack.
+    2. **Pop:** Remove an item from the top of the stack.
+    3. **Peek:** Read the value of an item from the top of the stack WITHOUT removing it
 
 - **Applications**:
     - Reversing a word. _Push_ letter by letter, and _Pop_ letter by letter
@@ -66,17 +66,16 @@
 
 
 
-## :link: Linked Lists:
+### :four: Linked Lists :link:
 
-- A linked list is a list of nodes and they're conceptually stored linearly in memory
-- In it's most basic form, a linked list is a string of nodes, sort of like a string of pearls, with each node containing both data and a reference to the next node in the list     
-    - Note: This is a singly linked list. 
-        - The nodes in a doubly linked list will contain references to both the next node and the previous node. 
-- The main advantage of using a linked list over a similar data structure, like the static array, is the linked list’s dynamic memory allocation: 
+#### A linked list is a list of nodes and they're conceptually stored linearly in memory
+#### In it's most basic form, a linked list is a string of nodes, sort of like a string of pearls, with each node containing both data and a reference to the next node in the list     
+1. Note: This is a singly linked list. 
+    - The nodes in a doubly linked list will contain references to both the next node and the previous node. 
+2. The main advantage of using a linked list over a similar data structure, like the static array, is the linked list’s dynamic memory allocation: 
     - if you don’t know the amount of data you want to store before hand, the linked list can adjust on the fly.* 
     - Of course this advantage comes at a price: dynamic memory allocation requires more space and commands slower look up times.
-- For storage, an array isnt a good choice (cuz it's static) because you're reguarly adding and removing things
-- A linked list is better, which is also a linear data structure
+3. For storage, an array isnt a good choice (cuz it's static) because you're reguarly adding and removing things, but linked list allows for effcient operations due to it's structure
 
 
 *In practice this means certain insertions are more expensive. For example, if the list initially allocates enough space for eight nodes, on the ninth insertion the list will have to double its allocated space to 16 and copy over the original 8 nodes, a more expensive operation than a normal insertion.
