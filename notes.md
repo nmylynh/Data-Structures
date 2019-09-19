@@ -28,27 +28,28 @@
 ### :two: Dynamic Array:
 - An array of which the size can change
 - Where you can allocate more space for the same data structure
+- Definition: a dynamic array, growable array, resizable array, dynamic table, mutable array, or array list is a random access, variable-size list data structure that allows elements to be added or removed. It is supplied with standard libraries in many modern mainstream programming languages.
 
 ### :three: Queues & Stacks
  [<img src="https://res.cloudinary.com/practicaldev/image/fetch/s--40bG1tSg--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://thepracticaldev.s3.amazonaws.com/i/fcxri84smzo9m1pxbxj9.png"/>](https://dev.to/rinsama77/data-structure-stack-and-queue-4ecd)
 
-#### **Queues:** First in, First Out - Horizontal
+#### :restroom: **Queues:** First in, First Out - Horizontal
 - A queue is a container of objects (a linear collection) that are inserted and removed according to the FIFO principle
 - For example, line at groceries, food courts, or retail stores
 - Only two operations are allowed:
     - **Enqueue**: Insert an item nto the back of the queue 
     - **Dequeue**: Removes the front item of the queue
-- **Applications**:
-    - Await functions
-    - Requests to server
-    - Sorting
 - The _data type queue_ is an adapter class
     - Meaning it is built on top of data structures
     - Underlying structure for a queue could be an array, a Vector, an ArrayList, a LinkedList, or any other collection
+- _Applications_:
+    - Await functions
+    - Requests to server
+    - Sorting
 
  [<img src="https://res.cloudinary.com/practicaldev/image/fetch/s--GS1k4iwx--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://thepracticaldev.s3.amazonaws.com/i/l8r4ic2gedi0j9obd7ix.jpg"/>](https://dev.to/rinsama77/data-structure-stack-and-queue-4ecd)
 
-#### **Stacks:** Last In, First Out - Vertical 
+#### :books: **Stacks:** Last In, First Out - Vertical 
 - A stack is a limited access data structure
     - Elements can only be added and removed at the top
 - Like a stack of books, you remove the top stack, and when you add, you add to the top stack
@@ -57,7 +58,7 @@
     2. **Pop:** Remove an item from the top of the stack.
     3. **Peek:** Read the value of an item from the top of the stack WITHOUT removing it
 
-- **Applications**:
+- _Applications_:
     - Reversing a word. _Push_ letter by letter, and _Pop_ letter by letter
         - _push_ `A, P, P, L, E`, _pop_ `E, L, P, P, A`
     - Undo mechanism in text editors. 
@@ -70,7 +71,7 @@
 
 #### A linked list is a list of nodes and they're conceptually stored linearly in memory
 #### In it's most basic form, a linked list is a string of nodes, sort of like a string of pearls, with each node containing both data and a reference to the next node in the list     
-1. Note: This is a singly linked list. 
+1. Note: This is a **singly linked list. **
     - The nodes in a doubly linked list will contain references to both the next node and the previous node. 
 2. The main advantage of using a linked list over a similar data structure, like the static array, is the linked list’s dynamic memory allocation: 
     - if you don’t know the amount of data you want to store before hand, the linked list can adjust on the fly.* 
@@ -80,7 +81,7 @@
 
 *In practice this means certain insertions are more expensive. For example, if the list initially allocates enough space for eight nodes, on the ninth insertion the list will have to double its allocated space to 16 and copy over the original 8 nodes, a more expensive operation than a normal insertion.
 
-### Pro's and Cons, Linked List:
+#### :interrobang: Pro's and Cons, Linked List:
 
 - If you want to delete data, or a node, you just have to unallocate it.
     - If the node was the head, you would reassign the head to the next node
