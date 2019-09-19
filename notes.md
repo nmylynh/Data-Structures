@@ -1,9 +1,9 @@
 # CS21 Data Structures: Linked Lists w/ Brian Doyle
 
  [<img src="https://3.bp.blogspot.com/-sXOQBd_OCR8/WBBn3QNhOiI/AAAAAAAAALQ/ysaUNOhKMoY59zw2cRxcHioHzdvn8HdNgCLcB/s1600/simpleLinkedList.png"/>](https://www.codefellows.org/blog/implementing-a-singly-linked-list-in-python/)
-### Terms:
+## Terms:
 
-#### Array:
+### :one: Array:
 - An `array` is consecutive memory, and has indices. Arrays start at 0.
 - arrays must be in a continuous spot in memory
     - because the index is simply multiplied by the size of the data structure
@@ -24,40 +24,44 @@
     - it's just reading what happens to be there in memory
     - and you have to keep it ordered because there's no way to index things of different sizes
 
-#### Dynamic Array:
+### :two: Dynamic Array:
 - An array of which the size can change
 - Where you can allocate more space for the same data structure
 
-#### Queues & Stacks
+### :three: Queues & Stacks
+ [<img src="https://res.cloudinary.com/practicaldev/image/fetch/s--40bG1tSg--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://thepracticaldev.s3.amazonaws.com/i/fcxri84smzo9m1pxbxj9.png"/>](https://dev.to/rinsama77/data-structure-stack-and-queue-4ecd)
 
-- **Queues:** First in, First Out - Horizontal
-    - A queue is a container of objects (a linear collection) that are inserted and removed according to the FIFO principle
-    - For example, line at groceries, food courts, or retail stores
-    - Only two operations are allowed:
-        - **Enqueue**: Insert an item nto the back of the queue 
-        - **Dequeue**: Removes the front item of the queue
-    - **Applications**:
-        - Await functions
-        - Requests to server
-        - Sorting
-    - The _data type queue_ is an adapter class
-        - Meaning it is built on top of data structures
-        - Underlying structure for a queue could be an array, a Vector, an ArrayList, a LinkedList, or any other collection
+#### **Queues:** First in, First Out - Horizontal
+- A queue is a container of objects (a linear collection) that are inserted and removed according to the FIFO principle
+- For example, line at groceries, food courts, or retail stores
+- Only two operations are allowed:
+    - **Enqueue**: Insert an item nto the back of the queue 
+    - **Dequeue**: Removes the front item of the queue
+- **Applications**:
+    - Await functions
+    - Requests to server
+    - Sorting
+- The _data type queue_ is an adapter class
+    - Meaning it is built on top of data structures
+    - Underlying structure for a queue could be an array, a Vector, an ArrayList, a LinkedList, or any other collection
 
+ [<img src="https://res.cloudinary.com/practicaldev/image/fetch/s--GS1k4iwx--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://thepracticaldev.s3.amazonaws.com/i/l8r4ic2gedi0j9obd7ix.jpg"/>](https://dev.to/rinsama77/data-structure-stack-and-queue-4ecd)
 
-- **Stacks:** Last In, First Out - Vertical 
-    - A stack is a limited access data structure
-        - Elements can only be added and removed at the top
-    - Like a stack of books, you remove the top stack, and when you add, you add to the top stack
-    - In _pushdown_ stacks, only two operations are allowed:
-        - **push**: adds the the item into the top of the stack
-        - **pop**: removes the item out of the top of the stack
-    - **Applications**:
-        - Reversing a word. _Push_ letter by letter, and _Pop_ letter by letter
-            - _push_ `A, P, P, L, E`, _pop_ `E, L, P, P, A`
-        - Undo mechanism in text editors. 
-            - Keeping all text changes in a stack
-            - `Ctrl + Z` 
+#### **Stacks:** Last In, First Out - Vertical 
+- A stack is a limited access data structure
+    - Elements can only be added and removed at the top
+- Like a stack of books, you remove the top stack, and when you add, you add to the top stack
+- There are 3 basic operations on a stack:
+1. Push: Insert a data item on the stack.
+2. Pop: Remove an item from the top of the stack.
+3. Peek: Read the value of an item from the top of the stack WITHOUT removing it
+
+- **Applications**:
+    - Reversing a word. _Push_ letter by letter, and _Pop_ letter by letter
+        - _push_ `A, P, P, L, E`, _pop_ `E, L, P, P, A`
+    - Undo mechanism in text editors. 
+        - Keeping all text changes in a stack
+        - `Ctrl + Z` 
 
 
 
