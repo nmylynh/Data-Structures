@@ -34,7 +34,7 @@
  [<img src="https://res.cloudinary.com/practicaldev/image/fetch/s--40bG1tSg--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://thepracticaldev.s3.amazonaws.com/i/fcxri84smzo9m1pxbxj9.png"/>](https://dev.to/rinsama77/data-structure-stack-and-queue-4ecd)
 
 #### :restroom: **Queues:** First in, First Out - Horizontal
-- A queue is a container of objects (a linear collection) that are inserted and removed according to the FIFO principle
+**A queue is a container of objects (a linear collection) that are inserted and removed according to the FIFO principle**
 - For example, line at groceries, food courts, or retail stores
 - Only two operations are allowed:
     - **Enqueue**: Insert an item nto the back of the queue 
@@ -50,8 +50,7 @@
  [<img src="https://res.cloudinary.com/practicaldev/image/fetch/s--GS1k4iwx--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://thepracticaldev.s3.amazonaws.com/i/l8r4ic2gedi0j9obd7ix.jpg"/>](https://dev.to/rinsama77/data-structure-stack-and-queue-4ecd)
 
 #### :books: **Stacks:** Last In, First Out - Vertical 
-- A stack is a limited access data structure
-    - Elements can only be added and removed at the top
+**A stack is a limited access data structure  where elements can only be added and removed at the top, LIFO principle**
 - Like a stack of books, you remove the top stack, and when you add, you add to the top stack
 - There are 3 basic operations on a stack:
     1. **Push:** Insert a data item on the stack.
@@ -67,7 +66,7 @@
 
 
 
-### :four: Linked Lists :link:
+### :four: :link: Linked Lists:
 
 #### A linked list is a list of nodes and they're conceptually stored linearly in memory
 #### In it's most basic form, a linked list is a string of nodes, sort of like a string of pearls, with each node containing both data and a reference to the next node in the list     
@@ -92,11 +91,10 @@
 - Linked lists prevents _buffer overflow attacks_ for when you're accessing indices in older languages
     - it prevents someone from accessing indices they're not supposed to access
 - **Singly Linked Lists** are more memory efficient because it only needs one pointer
-- **Doubly Linked Lsits** Needs two pointers
+- **Doubly Linked Lists** Needs two pointers
 
-### Structure:
-
-#### The Node:
+##  :paperclips: Structure of Linked Lists:
+### :paperclip: The Node:
 
 The node is where data is stored in the linked list (they remind me of those plastic Easter eggs that hold treats). Along with the data each node also holds a pointer, which is a reference to the next node in the list. Below is a simple implementation.
 
