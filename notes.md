@@ -15,7 +15,7 @@
     - deleted things aren't really deleted unless they're written over
 - As you append to an array, you use up more of your allocation
 
-- However, when you are maxxed out in memory for an array, and you cannot allocate it future in the same data structure (because the rest of the space is for another data structure, reserved and blocked off), you must copy the existing array and allocate the copied array somewhere else in memory, **and then** you can add the new input inside the copied array.
+     - However, when you are maxxed out in memory for an array, and you cannot allocate it future in the same data structure (because the rest of the space is for another data structure, reserved and blocked off), you must copy the existing array and allocate the copied array somewhere else in memory, **and then** you can add the new input inside the copied array.
 - Basically there are different addresses for arrays in RAM
 - You can put dynamic information in an array only if they're all objects.
 - But you cannot put different data types into an array.
@@ -27,6 +27,39 @@
 #### Dynamic Array:
 - An array of which the size can change
 - Where you can allocate more space for the same data structure
+
+#### Queues & Stacks
+
+- **Queues:** First in, First Out - Horizontal
+    - A queue is a container of objects (a linear collection) that are inserted and removed according to the FIFO principle
+    - For example, line at groceries, food courts, or retail stores
+    - Only two operations are allowed:
+        - **Enqueue**: Insert an item nto the back of the queue 
+        - **Dequeue**: Removes the front item of the queue
+    - **Applications**:
+        - Await functions
+        - Requests to server
+        - Sorting
+    - The _data type queue_ is an adapter class
+        - Meaning it is built on top of data structures
+        - Underlying structure for a queue could be an array, a Vector, an ArrayList, a LinkedList, or any other collection
+
+
+- **Stacks:** Last In, First Out - Vertical 
+    - A stack is a limited access data structure
+        - Elements can only be added and removed at the top
+    - Like a stack of books, you remove the top stack, and when you add, you add to the top stack
+    - In _pushdown_ stacks, only two operations are allowed:
+        - **push**: adds the the item into the top of the stack
+        - **pop**: removes the item out of the top of the stack
+    - **Applications**:
+        - Reversing a word. _Push_ letter by letter, and _Pop_ letter by letter
+            - _push_ `A, P, P, L, E`, _pop_ `E, L, P, P, A`
+        - Undo mechanism in text editors. 
+            - Keeping all text changes in a stack
+            - `Ctrl + Z` 
+
+
 
 # Linked List:
 
@@ -41,6 +74,19 @@
     - Of course this advantage comes at a price: dynamic memory allocation requires more space and commands slower look up times.
 
 *In practice this means certain insertions are more expensive. For example, if the list initially allocates enough space for eight nodes, on the ninth insertion the list will have to double its allocated space to 16 and copy over the original 8 nodes, a more expensive operation than a normal insertion.
+
+### Pro's and Cons, Linked List:
+
+- If you want to delete data, or a node, you just have to unallocate it.
+    - If the node was the head, you would reassign the head to the next node
+    - the operation is quick, so it's `O(1)`
+    - Same thing with tail
+- However, if you want to lookup data, it's going to be `O(n)` (as the search iterates over each element to find it)
+    - Because it's not indexed
+- Linked lists prevents _buffer overflow attacks_ for when you're accessing indices in older languages
+    - it prevents someone from accessing indices they're not supposed to access
+- **Singly Linked Lists** are more memory efficient because it only needs one pointer
+- **Doubly Linked Lsits** Needs two pointers
 
 ## The Node:
 
@@ -73,16 +119,21 @@ class Node(object):
 
 These will come in handy when we implement the Linked List.
 
-The Linked List
-My simple implementation of a linked list includes the following methods:
+Note: A doubly-linked list has pointers on both sides rather than a singly which has a one way pointer.
 
-Insert: inserts a new node into the list
+## The Linked List
 
-Size: returns size of list
+A simple implementation of a linked list includes the following methods:
 
-Search: searches list for a node containing the requested data and returns that node if found, otherwise raises an error
+- **Insert:** inserts a new node into the list
 
-Delete: searches list for a node containing the requested data and removes it from list if found, otherwise raises an error
+- **Size:** returns size of list
 
+- **Search:** searches list for a node containing the requested data and returns that node if found, otherwise raises an error
 
+- **Delete:** searches list for a node containing the requested data and removes it from list if found, otherwise raises an error
+
+## Doubly Linked List
+
+It's better to implement a Doubly Linked List because we know what's before and what's next.
 
