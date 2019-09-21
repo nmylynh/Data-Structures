@@ -554,3 +554,14 @@ queue elements are:
 6->7->
 queue is empty: False
 ```
+
+# Binary Search Trees
+
+## Terminology:
+
+- **Root:** The topmost node in the tree
+- **Child:** A node directly connected to anothe node when moving away from the top node.
+- **Parent:** A node directly connected to another node when moving _towards_ the root node.
+- **Siblings:** Nodes tha share the same parent are considered siblings.
+- **Leaf:** A node that does not have any children of it's own.
+
