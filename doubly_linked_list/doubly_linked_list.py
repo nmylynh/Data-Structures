@@ -32,6 +32,8 @@ class ListNode:
     if self.next:
       self.next.prev = self.prev
 
+# DOUBLY LINKED LIST~~~~~~~~~~~~~~~~~~
+
 """Our doubly-linked list class. It holds references to
 the list's head and tail nodes."""
 class DoublyLinkedList:
@@ -74,7 +76,7 @@ class DoublyLinkedList:
     if not self.head and not self.tail: # we know that this is first node head/tail
       self.head = new_node
       self.tail = new_node
-    else: # we know we're inserting at the beginning
+    else: # we know we're inserting at the end
       new_node.prev = self.tail
       self.tail.next = new_node
       self.tail = new_node
