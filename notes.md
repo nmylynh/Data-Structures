@@ -227,13 +227,22 @@ def delete(self, data):
         previous.set_next(current.get_next())
 ```
 
-#### Empty return
+#### Random
+
+Empty returns:
 
 ```python
 if hasattr(self, 'moved_away'): # if this is True we return/end the function
         return
      # if previous statement was False we start executing code from here
 ```
+
+> In class-based programming, objects are created from classes by subroutines called constructors, and destroyed by destructors. 
+
+>An object is an instance of a class, and may be called a class instance or class object; instantiation is then also known as construction.
+
+>self represents the instance of the class. By using the “self” keyword we can access the attributes and methods of the class in python. It binds the attributes with the given arguments.
+
 
 ## Doubly Linked List
 
