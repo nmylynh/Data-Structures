@@ -59,7 +59,8 @@
 
 - _Applications_:
     - Reversing a word. _Push_ letter by letter, and _Pop_ letter by letter
-        - _push_ `A, P, P, L, E`, _pop_ `E, L, P, P, A`
+        - _push_ `A, P, P, L, E`
+        - _pop_ `E, L, P, P, A`
     - Undo mechanism in text editors. 
         - Keeping all text changes in a stack
         - `Ctrl + Z` 
@@ -127,7 +128,8 @@ These will come in handy when we implement the Linked List.
 
 Note: A doubly-linked list has pointers on both sides rather than a singly which has a one way pointer.
 
-#### Implementation
+
+## Implementation
 
 A simple implementation of a linked list includes the following methods:
 
@@ -138,6 +140,92 @@ A simple implementation of a linked list includes the following methods:
 - **Search:** searches list for a node containing the requested data and returns that node if found, otherwise raises an error
 
 - **Delete:** searches list for a node containing the requested data and removes it from list if found, otherwise raises an error
+
+### The Head:
+
+- Is the top node in the list. 
+- When the list is first initialized it has no nodes, so the head is set to None. 
+- The linked list doesn’t necessarily require a node to initialize. 
+    - The head argument will default to None if a node is not provided.
+
+```python
+class LinkedList(object):
+    def __init__(self, head=None):
+        self.head = head
+```
+### Insert:
+
+**This insert method takes data, _initializes a new node_ with the given data, and _adds it to the list._** .
+
+- This insert method is `O(1)` 
+    - The insert method, no matter what, will always take the same amount of time: it can only take one data point, it can only ever create one node, and the new node doesn’t need to interact with all the other nodes in the list, the inserted node will only ever interact with the head.
+
+```python
+def insert(self, data):
+    new_node = Node(data)
+    new_node.set_next(self.head)
+    self.head = new_node
+```
+
+### Size:
+
+The size method is very simple, it basically counts nodes until it can’t find any more, and returns how many nodes it found. The method starts at the head node, travels down the line of nodes until it reaches the end (the current will be None when it reaches the end) while keeping track of how many nodes it has seen.
+
+The time complexity of size is O(n) because each time the method is called it will always visit every node in the list but only interact with them once, so n * 1 operations.
+
+```python
+def size(self):
+    current = self.head
+    count = 0
+    while current:
+        count += 1
+        current = current.get_next()
+    return count
+```
+### Search:
+
+Search is actually very similar to size, but instead of traversing the whole list of nodes it checks at each stop to see whether the current node has the requested data and if so, returns the node holding that data. If the method goes through the entire list but still hasn’t found the data, it raises a value error and notifies the user that the data is not in the list.
+
+The time complexity of search is `O(n)`.
+
+```python
+def search(self, data):
+    current = self.head
+    found = False
+    while current and found is False:
+        if current.get_data() == data:
+            found = True
+        else:
+            current = current.get_next()
+    if current is None:
+        raise ValueError("Data not in list")
+    return current
+```
+
+### Delete:
+
+Delete also iterates over each node as it searches for the node to be deleted. It keeps track of the node it passes, until it reaches the node to be delete and unallocates it by changing the pointer of the previous node to point to the next one.
+
+The time complexity for delete is also O(n), because in the worst case it will visit every node, interacting with each node a fixed number of times.
+
+```python
+def delete(self, data):
+    current = self.head
+    previous = None
+    found = False
+    while current and found is False:
+        if current.get_data() == data:
+            found = True
+        else:
+            previous = current
+            current = current.get_next()
+    if current is None:
+        raise ValueError("Data not in list")
+    if previous is None:
+        self.head = current.get_next()
+    else:
+        previous.set_next(current.get_next())
+```
 
 ## Doubly Linked List
 
