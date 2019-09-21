@@ -557,6 +557,12 @@ queue is empty: False
 
 # Binary Search Trees
 
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Binary_search_tree.svg/400px-Binary_search_tree.svg.png">
+
+>Binary search trees are binary trees that maintain the following invariant:
+
+>For any given node, all values in he left subtree are less than the value at the given node. Conversely, all values in the right subtree are greater than or equal to the value at the given node.
+
 ## Terminology:
 
 - **Root:** The topmost node in the tree
