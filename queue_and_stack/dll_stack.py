@@ -20,4 +20,4 @@ class Stack:
       return self.storage.remove_from_head()
 
   def len(self):
-    return self.storage.length
+    return self.storage.__len__()
