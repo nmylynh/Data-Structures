@@ -557,7 +557,7 @@ queue is empty: False
 
 # Binary Search Trees
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Binary_search_tree.svg/400px-Binary_search_tree.svg.png">
+<img src="https://i.imgur.com/25ziRZX.png">
 
 >Binary search trees are binary trees that maintain the following invariant:
 
@@ -566,7 +566,7 @@ queue is empty: False
 ## Terminology:
 
 - **Root:** The topmost node in the tree
-- **Child:** A node directly connected to anothe node when moving away from the top node.
+- **Child:** A node directly connected to another node when moving away from the top node.
 - **Parent:** A node directly connected to another node when moving _towards_ the root node.
 - **Siblings:** Nodes tha share the same parent are considered siblings.
 - **Leaf:** A node that does not have any children of it's own.
