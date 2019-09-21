@@ -231,3 +231,10 @@ def delete(self, data):
 
 It's better to implement a Doubly Linked List because we know what's before and what's next.
 
+#### Empty return
+
+```python
+if hasattr(self, 'moved_away'): # if this is True we return/end the function
+        return
+     # if previous statement was False we start executing code from here
+```
