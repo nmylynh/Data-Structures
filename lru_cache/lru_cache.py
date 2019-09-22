@@ -1,3 +1,4 @@
+from doubly_linked_list import DoublyLinkedList
 class LRUCache:
   """
   Our LRUCache class keeps track of the max number of nodes it
@@ -5,9 +6,19 @@ class LRUCache:
   linked list that holds the key-value entries in the correct 
   order, as well as a storage dict that provides fast access
   to every node stored in the cache.
+
   """
+
+# Need a DLL to store the order
+# Dict store key value pairs
+# need two things for size:
+# currrent size & limit
+
   def __init__(self, limit=10):
-    pass
+    self.order = DoublyLinkedList()
+    self.storage = dict()
+    self.size = 0
+    self.limit= limit
 
   """
   Retrieves the value associated with the given key. Also
