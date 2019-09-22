@@ -561,13 +561,13 @@ queue is empty: False
 
 >Binary search trees are binary trees that maintain the following invariant:
 
->For any given node, all values in he left subtree are less than the value at the given node. Conversely, all values in the right subtree are greater than or equal to the value at the given node.
+>For any given node, all values in the left subtree are less than the value at the given node. Conversely, all values in the right subtree are greater than or equal to the value at the given node.
 
 ## Terminology:
 
 - **Root:** The topmost node in the tree
 - **Child:** A node directly connected to another node when moving away from the top node.
 - **Parent:** A node directly connected to another node when moving _towards_ the root node.
-- **Siblings:** Nodes tha share the same parent are considered siblings.
+- **Siblings:** Nodes that share the same parent are considered siblings.
 - **Leaf:** A node that does not have any children of it's own.
 
