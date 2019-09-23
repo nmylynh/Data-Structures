@@ -31,12 +31,16 @@ class BinarySearchTree:
   def contains(self, target):
     if target == self.value:
       return True
-    elif self.value > target:
-      self.contains(self.right)
-    elif self.value < target:
-      self.contains(self.left)
-    else:
-      return False
+    # target < parent? go left
+    if target < self.value:
+      if self.left == None:
+        return False
+      return self.left.contains(target)
+    # target > parent? go right
+    if target > self.value:
+      if self.right == None:
+        return False
+      return self.right.contains(target)
 
 # `get_max` returns the maximum value in the binary search tree.
 # keeps recursively traversing tree until reaching rightmost leaf
@@ -49,4 +53,8 @@ class BinarySearchTree:
 # `for_each` performs a traversal of _every_ node in the tree, executing the passed-in callback function on each tree node value. There is a myriad of ways to perform tree traversal; in this case any of them should work. 
 
   def for_each(self, cb):
-    pass
+    if self.left:
+      self.left.for_each(cb)
+    cb(self.value)
+    if self.right:
+      self.right.for_each(cb)
