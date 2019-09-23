@@ -248,6 +248,12 @@ if hasattr(self, 'moved_away'): # if this is True we return/end the function
 
 It's better to implement a Doubly Linked List because we know what's before and what's next.
 
+>We want to use a linked list, since we're adding things from the beginning, we want to be able to do that freely.
+
+>But linked lists don't have indices so we use the dictionary to create and index for the linked list where it contains both the passed in value and a reference to the node. 
+
+>We're finding the reference to the node by the key.
+>Dictionaries in python are hash tables
 ### Stacks:
 
 From GeeksforGeeks:
@@ -561,7 +567,9 @@ queue is empty: False
 
 >Binary search trees are binary trees that maintain the following invariant:
 
->For any given node, all values in the left subtree are less than the value at the given node. Conversely, all values in the right subtree are greater than or equal to the value at the given node.
+>For any given node, all values in the left subtree are less than the value at the given node. Conversely, all values in the right subtree are greater than or equal to the value at the given node. `O(log n)`
+
+
 
 ## Terminology:
 
