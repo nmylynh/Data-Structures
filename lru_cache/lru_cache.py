@@ -40,5 +40,30 @@ class LRUCache:
   want to overwrite the old value associated with the key with
   the newly-specified value. 
   """
+
+
+  # Add pair to the cache - add to dict and add it to nodes/DLL
   def set(self, key, value):
-    pass
+    # if already exist, overwrite value 
+    if key in self.storage:
+    # - update dict
+      node = self.storage[key]
+      node.value = (key, value)
+    # mark as most recently used - Put in the head of the DLL
+      self.order.move_to_front(node)
+      return
+    # if at max capacity, dump oldest - remove from tail of DLL
+    if self.size == self.limit:
+    # dump the oldest:
+    # remove it from the linked list
+    # remove it from the dict
+      del self.storage[self.order.tail.value[0]]
+      self.order.remove_from_tail()
+      self.size -= 1
+    # add pair to the cache - add to dict and add it to nodes/DLL
+    self.order.add_to_head((key, value))
+    self.storage[key] = self.order.head
+    self.size += 1
+
+
+
