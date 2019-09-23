@@ -29,7 +29,7 @@ class LRUCache:
   """
   def get(self, key):
     # Pull the value out of the dict using the key
-    if key in self.storage[key]:
+    if key in self.storage:
       node = self.storage[key]
       self.order.move_to_front(node)
       return node.value[1]
