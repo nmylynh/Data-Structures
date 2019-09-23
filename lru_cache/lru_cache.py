@@ -28,7 +28,15 @@ class LRUCache:
   key-value pair doesn't exist in the cache. 
   """
   def get(self, key):
-    pass
+    # Pull the value out of the dict using the key
+    if key in self.storage[key]:
+      node = self.storage[key]
+      self.order.move_to_front(node)
+      return node.value[1]
+    # update position in the list
+    # or return none
+    else:
+      return None
 
   """
   Adds the given key-value pair to the cache. The newly-
